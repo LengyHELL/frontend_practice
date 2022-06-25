@@ -1,3 +1,21 @@
 <div>
-    <button (click)="this.authService.logIn('mark')">Login</button>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" formControlName="username" />
+            <span *ngIf="submitted && this.loginForm.get(['username']) !== null && this.loginForm.get(['username']).errors !== null">
+                <div *ngIf="this.loginForm.get(['username']).errors['required']">Username required!</div>
+                <div *ngIf="this.loginForm.get(['username']).errors['email']">Invalid username!</div>
+            </span>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" formControlName="password" />
+            <span *ngIf="submitted && this.loginForm.get(['password']) !== null && this.loginForm.get(['password']).errors !== null">
+                <div *ngIf="this.loginForm.get(['password']).errors['required']">Password required!</div>
+                <div *ngIf="this.loginForm.get(['password']).errors['pattern']">Invalid password!</div>
+            </span>
+        </div>
+        <button>Login</button>
+    </form>
 </div>

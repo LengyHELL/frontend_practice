@@ -1,4 +1,12 @@
 <h1>Welcome home, {{this.authService.getUser}}!</h1>
 <div>
     <button (click)="this.authService.logOut()">Logout</button>
+    <ul>
+        <li *ngFor="let movie of this.movies">
+            <div>
+                {{movie.original_title}}
+                <img *ngIf="posterBaseUrl !== ''" src="{{posterBaseUrl + posterSizes.slice(-3)[0] + movie.poster_path}}" alt="">
+            </div>
+        </li>
+    </ul>
 </div>

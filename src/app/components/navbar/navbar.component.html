@@ -1,0 +1,19 @@
+<div *ngIf="this.authenticationService.currentUserValue">
+  <ul class="nav">
+    <li *ngFor="let navbarElement of navbarElements" class="nav-item">
+      <a routerLink="{{navbarElement.route}}">
+        {{navbarElement.name}}
+        <input
+          *ngIf="this.router.url.endsWith('/search') && (navbarElement.route == '/search')"
+          type="text"
+          name="search"
+          id="search"
+          (change)="movieService.searchTermChange.next(searchTerm)"
+          [(ngModel)]="searchTerm">
+      </a>
+    </li>
+    <li class="nav-item">
+      <button (click)="authenticationService.logout()">Logout</button>
+    </li>
+  </ul>
+</div>

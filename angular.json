@@ -3,14 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "frontend_practice": {
+    "movies-app-lengyel-mark": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
-        },
-        "@schematics/angular:application": {
-          "strict": true
         }
       },
       "root": "",
@@ -20,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/frontend_practice",
+            "outputPath": "dist/movies-app-lengyel-mark",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "frontend_practice:build:production"
+              "browserTarget": "movies-app-lengyel-mark:build:production"
             },
             "development": {
-              "browserTarget": "frontend_practice:build:development"
+              "browserTarget": "movies-app-lengyel-mark:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "frontend_practice:build"
+            "browserTarget": "movies-app-lengyel-mark:build"
           }
         },
         "test": {
@@ -107,5 +104,7 @@
       }
     }
   },
-  "defaultProject": "frontend_practice"
+  "cli": {
+    "analytics": false
+  }
 }

@@ -24,7 +24,7 @@ jobs:
 #      run: npm run test:headless
 
     - name: Build
-      run: npm run build --base-href="/"
+      run: npm run build --baseHref="/"
 
     - name: Copying index to 404
       run: cp dist/frontend_practice/index.html dist/frontend_practice/404.html

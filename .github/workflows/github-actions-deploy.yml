@@ -24,7 +24,7 @@ jobs:
 #      run: npm run test:headless
 
     - name: Build
-      run: npm run build --watch --baseHref="/frontend_practice/"
+      run: npm run build --watch --baseHref="https://lengyhell.github.io/frontend_practice/"
     
     - name: Deploy
       if: success()

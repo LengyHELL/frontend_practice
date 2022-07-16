@@ -1,0 +1,37 @@
+
+.demo-table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.demo-table {
+    width: 80%;
+    margin-top: 4rem;
+}
+  
+.mat-column-demo-position {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+}
+
+.mat-column-demo-image {
+    padding-left: 16px;
+}
+
+.mat-column-demo-name {
+    padding-left: 16px;
+}
+
+.mat-column-demo-weight {
+    font-style: italic;
+}
+
+.mat-column-demo-symbol {
+    width: 32px;
+    text-align: center;
+    font-weight: bold;
+}
+  

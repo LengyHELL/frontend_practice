@@ -24,7 +24,7 @@ jobs:
 #      run: npm run test:headless
 
     - name: Build
-      run: npm run build  -- --base-href="/frontend_practice/"
+      run: npm run build  -- --base-href="https://lengyhell.github.io/frontend_practice/"
 
     - name: Copying index to 404
       run: cp dist/frontend_practice/index.html dist/frontend_practice/404.html

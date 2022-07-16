@@ -24,7 +24,7 @@ jobs:
 #      run: npm run test:headless
 
     - name: Build
-      run: ng build --watch
+      run: npm run build --watch
     
     - name: Deploy
       if: success()
